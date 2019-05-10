@@ -248,7 +248,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else if (m_IsWalking)
                 StaminaRecharge();
 
-            Debug.Log(m_Stamina);
+            //Debug.Log(m_Stamina);
         }
 
 

@@ -81,10 +81,23 @@ public class Flashlight : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        // If enemy enters collider, call method on enemy to stop it
+        // If enemy enters collider, stop the enemy
         if (col.CompareTag("Enemy"))
         {
-            // Call stop method
+            // Stop enemy's movement
+            EnemyAI enemyAI = col.GetComponent<EnemyAI>();
+            enemyAI.StopMovement();
+        }
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        // If enemy leaves collider, resume enemy movement
+        if (col.CompareTag("Enemy"))
+        {
+            // Stop enemy's movement
+            EnemyAI enemyAI = col.GetComponent<EnemyAI>();
+            enemyAI.ResumeMovement();
         }
     }
 

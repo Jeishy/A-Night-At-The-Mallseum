@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7944799943376607103}
   - component: {fileID: 7944799943383092063}
   - component: {fileID: 7944799943370294553}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 7944799943371448511}
   - component: {fileID: 7944799943381579327}
   - component: {fileID: 7944799943382928575}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,6 +397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flashlight
       objectReference: {fileID: 0}
+    - target: {fileID: 8538701149620244085, guid: cc9ddd3fc9822024a98d540ce47fb8a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8538701149620244084, guid: cc9ddd3fc9822024a98d540ce47fb8a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -451,6 +456,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538701151116768792, guid: cc9ddd3fc9822024a98d540ce47fb8a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 386854794578201749, guid: cc9ddd3fc9822024a98d540ce47fb8a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538701150010938596, guid: cc9ddd3fc9822024a98d540ce47fb8a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9ddd3fc9822024a98d540ce47fb8a4, type: 3}
