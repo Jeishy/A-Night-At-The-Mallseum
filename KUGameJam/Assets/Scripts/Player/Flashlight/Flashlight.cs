@@ -43,6 +43,7 @@ public class Flashlight : MonoBehaviour
     private void Update()
     {
         Debug.Log(_currentFlashlightMeter);
+        Debug.Log(_isLightOn);
         // Check if mouse 1 pressed
         if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && !_isLightOn)
         {
@@ -59,7 +60,7 @@ public class Flashlight : MonoBehaviour
         if (_currentFlashlightMeter < _maxFlashlightMeter && !_isLightOn)
             LightMeterRecharge();
 
-        if (_currentFlashlightMeter <= 10)
+        if (_currentFlashlightMeter < 10 && _canFlashlightTurnOn)
         {
             TurnOffFlashlight();
             // Set current light meter value to 0
