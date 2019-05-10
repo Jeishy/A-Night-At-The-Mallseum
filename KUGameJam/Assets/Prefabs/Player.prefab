@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 7944799943371448511}
   - component: {fileID: 7944799943381579327}
   - component: {fileID: 7944799943382928575}
+  - component: {fileID: 1956274496}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -385,6 +386,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1956274496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7944799943378507103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d5359b1ebf70c44a8a3436b760e41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactbutton: Fire2
+  interactDistance: 5000000
+  interactlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  interactIcon: {fileID: 0}
+  isInteracting: 0
 --- !u!1001 &7111959366757920204
 PrefabInstance:
   m_ObjectHideFlags: 0

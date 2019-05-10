@@ -37,12 +37,12 @@ public class Interactable : MonoBehaviour
             //Debug.DrawRay(GameObject.FindGameObjectWithTag("Player").transform.position, Vector3.Normalize(transform.position - GameObject.FindGameObjectWithTag("Player").transform.position)* 50, Color.green);
             if (isInteracting == false)
             {
-                
+                interactIcon.enabled = false;
                 if (interactIcon != null)
                 {
                     interactIcon.enabled = true;
                 }
-                interactIcon.enabled = false;
+                
 
 
                 if (Input.GetButtonDown(interactbutton))
