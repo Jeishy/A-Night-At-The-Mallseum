@@ -27,6 +27,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        [SerializeField] private int m_MaxStamina;
+        [SerializeField] private int m_StaminaReductionRate;
+        [SerializeField] private int m_StaminaRechargeRate;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -41,6 +44,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private int m_Stamina;
+        private float m_StaminaTime;
+        private bool m_CanRun;
 
         // Use this for initialization
         private void Start()
@@ -55,6 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            m_Stamina = m_MaxStamina;
         }
 
 
@@ -212,7 +219,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+            m_IsWalking = (!Input.GetKey(KeyCode.LeftShift)) || (m_Stamina <= 0 && Input.GetKey(KeyCode.LeftShift));
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
@@ -226,11 +233,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             // handle speed change to give an fov kick
             // only if the player is going to a run, is running and the fovkick is to be used
+            // and stamina is not at 0
             if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
             {
                 StopAllCoroutines();
                 StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
             }
+
+            if (!m_IsWalking && m_Stamina > 0)
+            {
+                // Reduce stamina if running
+                StaminaDepletion();
+            }
+            else if (m_IsWalking)
+                StaminaRecharge();
+
+            Debug.Log(m_Stamina);
         }
 
 
@@ -239,6 +257,39 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
+        private void StaminaDepletion()
+        {
+            Debug.Log("Depleting stamina");
+            if (m_StaminaTime <= Time.time && !m_IsWalking)
+            {
+                // Deplete light meter every second
+                m_StaminaTime = Time.time + 1f;
+                if (m_Stamina > 0)
+                {
+                    m_Stamina -= m_StaminaReductionRate;
+                    if (m_Stamina <= 0)
+                    {
+                        m_Stamina = 0;
+                        m_IsWalking = true;
+                    }
+                }
+            }
+        }
+
+        private void StaminaRecharge()
+        {
+            if (m_StaminaTime <= Time.time)
+            {
+                // Deplete light meter every second
+                m_StaminaTime = Time.time + 1f;
+                if(m_Stamina < m_MaxStamina)
+                    m_Stamina += m_StaminaReductionRate;
+                if (m_Stamina >= m_MaxStamina)
+                {
+                    m_Stamina = m_MaxStamina;
+                }
+            }
+        }
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
