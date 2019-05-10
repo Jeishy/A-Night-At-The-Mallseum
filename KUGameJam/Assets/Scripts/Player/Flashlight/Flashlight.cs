@@ -42,8 +42,6 @@ public class Flashlight : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_currentFlashlightMeter);
-        Debug.Log(_isLightOn);
         // Check if mouse 1 pressed
         if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && !_isLightOn)
         {
