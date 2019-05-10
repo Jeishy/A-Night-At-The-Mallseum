@@ -34,21 +34,32 @@ public class Interactable : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, interactDistance, interactlayer))
         {
-
-            if (!isInteracting)
+            //Debug.DrawRay(GameObject.FindGameObjectWithTag("Player").transform.position, Vector3.Normalize(transform.position - GameObject.FindGameObjectWithTag("Player").transform.position)* 50, Color.green);
+            if (isInteracting == false)
             {
+                
                 if (interactIcon != null)
                 {
                     interactIcon.enabled = true;
                 }
+                interactIcon.enabled = false;
 
-                if(Input.GetButtonDown(interactbutton))
+
+                if (Input.GetButtonDown(interactbutton))
                 {
                 /*    if(hit.collider.CompareTag("Door")
                     {
                         hit.collider.GetComponent<Door>.ChangeDoorState();
+                    }*/
+                    if(hit.collider.CompareTag("Note"))
+                    {
+                        
+                        hit.collider.GetComponent<Note>().ShowNoteImage();
                     }
-                */}
+
+
+                }
+                
             }
         }
     }
