@@ -58,7 +58,7 @@ public class EnemyAI : MonoBehaviour
             ResumeMovement();
         }
 
-        if (GetDistanceToPlayer() <= 1.5f)
+        if (GetDistanceToPlayer() <= 2f)
         {
             SetNewState(EnemyStates.Caught);
         }

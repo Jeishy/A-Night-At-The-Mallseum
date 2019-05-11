@@ -13,10 +13,12 @@ public class GameManager : MonoBehaviour
 
     private Transform _deathTrans;
     private GameObject _deathPanelGO;
+    private GameObject _pausePanelGO;
     private GameObject[] _notes;
     private Transform _playerTrans;
     private Transform _originalTrans;
     private int _numNotesCollected;
+    private bool _isGamePaused;
 
     private void Awake()
     {
@@ -33,7 +35,9 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _deathPanelGO = GameObject.Find("DeathPanel");
+        _pausePanelGO = GameObject.Find("PausePanel");
         _deathPanelGO.SetActive(false);
+        _pausePanelGO.SetActive(false);
         _playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
         FirstPersonController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
         _originalTrans = _playerTrans;
@@ -41,6 +45,7 @@ public class GameManager : MonoBehaviour
         _doorPieces = GameObject.FindGameObjectsWithTag("DoorPiece");
         _notes = GameObject.FindGameObjectsWithTag("Note");
         _numNotesCollected = 0;
+        _isGamePaused = false;
         // Disable all door pieces
         foreach (GameObject doorPiece in _doorPieces)
         {
@@ -51,9 +56,22 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Die();
+            if (!_isGamePaused)
+            {
+                _isGamePaused = true;
+                // Pause the game
+                PauseGame();
+                OpenPauseMenu();
+            }
+            else
+            {
+                _isGamePaused = false;
+                UnpauseGame();
+                HidePauseMenu();
+            }
+
         }
     }
 
@@ -63,10 +81,10 @@ public class GameManager : MonoBehaviour
         // Set mouse look sens to 0
         FirstPersonController.m_MouseLook.XSensitivity = 0f;
         FirstPersonController.m_MouseLook.YSensitivity = 0f;
-        // Pause game
-        PauseGame();
         // Show death canvas
         _deathPanelGO.SetActive(true);
+        // Pause game
+        PauseGame();
     }
 
     public void Win()
@@ -80,13 +98,15 @@ public class GameManager : MonoBehaviour
         _numNotesCollected++;
         // Enable door piece that corresponds to same note piece index
         int collectNoteIndex = Array.IndexOf(_notes, collectableGO);
-
+        // Increase enemy's movement speed
+        EnemyAI enemyAI = GameObject.Find("EnemyObject").GetComponent<EnemyAI>();
+        enemyAI.SetNewMoveSpeed();
         _doorPieces[collectNoteIndex].SetActive(true);
         if (_numNotesCollected == 9)
             Win();
     }
 
-    private void PauseGame()
+    public void PauseGame()
     {
         // Disable fps controller
         FirstPersonController.enabled = false;
@@ -95,5 +115,22 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         // Pause the game
         Time.timeScale = 0;
+    }
+
+    public void UnpauseGame()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        FirstPersonController.enabled = true;
+    }
+
+    private void OpenPauseMenu()
+    {
+        _pausePanelGO.SetActive(true);
+    }
+
+    private void HidePauseMenu()
+    {
+        _pausePanelGO.SetActive(false);
     }
 }
