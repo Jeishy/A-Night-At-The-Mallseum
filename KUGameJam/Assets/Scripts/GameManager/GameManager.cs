@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
         // Show death canvas
     }
 
-    // Function called when player collects a collectable
-    public void CollectableCollect(GameObject collectableGO)
+    // Function called when player collects a note
+    public void NoteCollect(GameObject collectableGO)
     {
         // Add collectable to collected collectables list
         CollectedCollectables.Add(collectableGO); 

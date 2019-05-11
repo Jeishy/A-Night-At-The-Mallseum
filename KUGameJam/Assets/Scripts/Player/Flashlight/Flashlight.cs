@@ -5,7 +5,7 @@ using UnityEngine;
 public class Flashlight : MonoBehaviour
 {
     [Tooltip("The max flashlight meter amount")]
-    [SerializeField] private int _maxFlashlightMeter;                                   // The max flashlight meter value
+    public int _maxFlashlightMeter;                                   // The max flashlight meter value
 
     [Tooltip("The rate at wich the flashlight meter decreases")]
     [SerializeField] private int _lightMeterDepletionRate;                               // The depletion rate of the flashlight
@@ -42,6 +42,7 @@ public class Flashlight : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(_currentFlashlightMeter);
         // Check if mouse 1 pressed
         if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && !IsLightOn)
         {
@@ -116,5 +117,11 @@ public class Flashlight : MonoBehaviour
             _lightTime = Time.time + 1f;
             _currentFlashlightMeter += _lightMeterRechargeRate;
         }
+    }
+
+    public void IncreaseFlashlightMeter(float rechargeAmount)
+    {
+        int recharge = Mathf.RoundToInt(rechargeAmount);
+        _currentFlashlightMeter += recharge;
     }
 }

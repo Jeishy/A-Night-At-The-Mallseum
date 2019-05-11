@@ -30,12 +30,13 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = new Ray(transform.position, transform.position);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit, interactDistance, interactlayer))
         {
-            //Debug.DrawRay(GameObject.FindGameObjectWithTag("Player").transform.position, Vector3.Normalize(transform.position - GameObject.FindGameObjectWithTag("Player").transform.position)* 50, Color.green);
+            Debug.Log("Interacting");
+            Debug.DrawRay(transform.position, Vector3.Normalize(hit.point - transform.position)* 100f, Color.green);
             if (isInteracting == false)
             {
                 interactIcon.enabled = false;
@@ -54,11 +55,19 @@ public class Interactable : MonoBehaviour
                     }*/
                     if(hit.collider.CompareTag("Note"))
                     {
+                        GameObject noteGo = hit.collider.gameObject;
+                        GameManager.Instance.NoteCollect(noteGo);
+
                         Note note = hit.collider.GetComponent<Note>();
                         DialogueTrigger dialogueTrigger = hit.collider.GetComponent<DialogueTrigger>();
 
                         note.ShowNoteImage();
                         TriggerDialogue(dialogueTrigger.dialogue);
+                    }
+                    else if (hit.collider.CompareTag("Battery"))
+                    {
+                        Battery battery = hit.collider.gameObject.GetComponent<Battery>();
+                        battery.BatteryCollect();
                     }
 
 
