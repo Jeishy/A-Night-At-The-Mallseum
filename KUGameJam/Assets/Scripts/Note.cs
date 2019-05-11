@@ -11,7 +11,6 @@ public class Note : MonoBehaviour
     public GameObject NoteSentencesText;
 
     public AudioClip pickupSound;
-    public AudioClip putawaySound;
 
     public GameObject playerobject;
 
@@ -39,7 +38,7 @@ public class Note : MonoBehaviour
     {
         Noteimage.enabled = false;
         NoteSentencesText.SetActive(false);
-        GetComponent<AudioSource>().PlayOneShot(putawaySound);
+        GetComponent<AudioSource>().PlayOneShot(pickupSound);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

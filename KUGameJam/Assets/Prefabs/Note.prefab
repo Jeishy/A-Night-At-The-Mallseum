@@ -4940,8 +4940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Noteimage: {fileID: 0}
   NoteSentencesText: {fileID: 0}
-  pickupSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
-  putawaySound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  pickupSound: {fileID: 8300000, guid: 9f6825c432eb6b247b5b5d0da381d557, type: 3}
   playerobject: {fileID: 0}
 --- !u!82 &7520941995871331598
 AudioSource:
