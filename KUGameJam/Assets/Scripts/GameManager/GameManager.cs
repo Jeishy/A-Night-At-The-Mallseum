@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [HideInInspector] public static GameManager Instance = null;
     [HideInInspector] public FirstPersonController FirstPersonController;
+    [HideInInspector] public bool HasWon;
 
     [SerializeField] private GameObject[] _doorPieces = new GameObject[9];
 
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         _notes = GameObject.FindGameObjectsWithTag("Note");
         _numNotesCollected = 0;
         _isGamePaused = false;
+        HasWon = true;
         // Disable all door pieces
         foreach (GameObject doorPiece in _doorPieces)
         {
@@ -87,9 +90,14 @@ public class GameManager : MonoBehaviour
         PauseGame();
     }
 
-    public void Win()
+    public void CompleteLevel()
     {
         // Interact with door
+        if (HasWon)
+        {
+            // Load the mall scene
+            SceneManager.LoadScene(2);
+        }
     }
 
     // Function called when player collects a note
@@ -103,7 +111,7 @@ public class GameManager : MonoBehaviour
         enemyAI.SetNewMoveSpeed();
         _doorPieces[collectNoteIndex].SetActive(true);
         if (_numNotesCollected == 9)
-            Win();
+            HasWon = true;
     }
 
     public void PauseGame()

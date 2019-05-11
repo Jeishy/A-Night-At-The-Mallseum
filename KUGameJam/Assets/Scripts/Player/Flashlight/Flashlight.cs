@@ -51,7 +51,7 @@ public class Flashlight : MonoBehaviour
             TurnOffFlashlight();
         }
 
-        if (_currentFlashlightMeter < 10 && _canFlashlightTurnOn)
+        if (_currentFlashlightMeter <= 0 && _canFlashlightTurnOn)
         {
             TurnOffFlashlight();
             // Set current light meter value to 0

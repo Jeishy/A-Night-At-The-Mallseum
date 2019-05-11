@@ -7805,6 +7805,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 49.994484
       objectReference: {fileID: 0}
+    - target: {fileID: 2277119067600962380, guid: 2664990909f289c42866cf9af988d7fe,
+        type: 3}
+      propertyPath: _fpsController
+      value: 
+      objectReference: {fileID: 1956274495}
+    - target: {fileID: 265242343875741667, guid: 2664990909f289c42866cf9af988d7fe,
+        type: 3}
+      propertyPath: _flashlight
+      value: 
+      objectReference: {fileID: 1383587809}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9dbbda471ce88c4fb94c0bb1c7cd9f0, type: 3}
 --- !u!1 &1692249674
@@ -9132,6 +9142,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1058774863}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956274495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7944799943371448511, guid: c67bf75731fda024da5eb1e45dfa1373,
+    type: 3}
+  m_PrefabInstance: {fileID: 1058774863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956274490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1956274497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7944799943378143615, guid: c67bf75731fda024da5eb1e45dfa1373,
