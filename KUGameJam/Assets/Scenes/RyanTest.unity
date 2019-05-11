@@ -1886,6 +1886,11 @@ PrefabInstance:
       propertyPath: putawaySound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: My name is Death.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!4 &414471792 stripped
@@ -3807,6 +3812,17 @@ PrefabInstance:
       propertyPath: putawaySound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "You finally step outside your car and walk inside, stumbling a little
+        on the icy sidewalk and peering tentatively at the icicles above. If I was
+        able, I would laugh at the memory of my mother\u2026 or perhaps it was my
+        grandmother\u2026 so long ago warning me of the deadly danger that icicles
+        pose, but now I know better; that isn\u2019t how death works at all. You slam
+        the door behind you, but I glide through confidently, for I know I am still
+        invisible to your eyes."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!4 &859416113 stripped
@@ -4916,6 +4932,14 @@ PrefabInstance:
       propertyPath: putawaySound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "You shudder in confusion, and look up to see me. A guttural and unearthly
+        scream escapes your lips (really, am I that terrible?) as I reach out for
+        your hand and pull you through your dimension into mine. As the mortals see
+        it\u2026 to your death."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!4 &1073871026 stripped
@@ -5345,19 +5369,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1097536176}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1104222464
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104222463}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.053592846, y: 0.13453215, z: 0.100214064}
-  m_Center: {x: 0.0003493391, y: -4.161118e-27, z: 0.002184525}
 --- !u!114 &1104222465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5370,6 +5381,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbe2e508ddef27e4f809b4e7d03a0d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1104222466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104222463}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.053592846, y: 0.13453215, z: 0.100214064}
+  m_Center: {x: 0.0003493391, y: -4.161118e-27, z: 0.002184525}
 --- !u!1 &1110538172
 GameObject:
   m_ObjectHideFlags: 0
@@ -5510,6 +5534,18 @@ PrefabInstance:
         type: 3}
       propertyPath: putawaySound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "You turn toward the bathroom, and I blush and choose not to follow.
+        Instead, I explore your house and ponder on what sort of person you must be.
+        I wonder if you will take this gracefully or filled with terror; I wonder
+        if you are ready. I self consciously pull at my long black robe and glance
+        again at the card I hurriedly wrote, making sure my writing is legible. As
+        you exit the bathroom and head to the kitchen, I take my opportunity and lay
+        the card gently on your table, where I know you must sooner or later notice
+        it. Take your time, though, we are in no rush.\r\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
@@ -5923,6 +5959,11 @@ PrefabInstance:
         type: 3}
       propertyPath: putawaySound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: This is so exciting!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
@@ -8085,6 +8126,15 @@ PrefabInstance:
       propertyPath: putawaySound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "I am not the only Death, but one of many. See, most people think of
+        death as falling asleep and waking up on another side, but that\u2019s not
+        right at all. Death is like being pulled by your ankle deep into the depths
+        of the oceans- sudden, inexplicable, and suffocating. I am here to drag you
+        there, for none can achieve death on their own."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!4 &1704479878 stripped
@@ -8264,6 +8314,16 @@ PrefabInstance:
       propertyPath: putawaySound
       value: 
       objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "From the moment I saw you, something within me said \u201CThat\u2019s
+        it! That\u2019s the one!\u201D I was nervous because I have never been a guide
+        before, but I know I am ready for this moment. The last thing I remember before
+        dying was reading a small card, then looking up and seeing terrible red eyes
+        peering into mine. Since this is my first time, I decided to do what my guide
+        did for me."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!4 &1762678763 stripped
@@ -14176,6 +14236,18 @@ PrefabInstance:
       propertyPath: putawaySound
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "You hum \u201CBohemian Rhapsody\u201D to yourself as you pull a frozen
+        dinner from the freezer and pop it in the microwave. I consider starting a
+        fire to make my first guiding experience more grand, but I think you would
+        prefer it my way. I could almost feel an echo of my long-stilled heart as
+        you turn around and fixate on my note. Peering around anxiously, you bend
+        down to pick it up and read it. I get into place, because I know as soon as
+        you read my name, you will be able to see me, and I must make myself terrifyingly
+        presentable.\r\n"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!4 &1996219838 stripped
@@ -16064,6 +16136,12 @@ PrefabInstance:
       propertyPath: playerobject
       value: 
       objectReference: {fileID: 1956274490}
+    - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: dialogue.sentences
+      value: "I never knew you existed before, but now you\u2019re all I can think
+        about. "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a8b001c59e63e40a725fbfe6a4eb5c, type: 3}
 --- !u!1001 &7780842316100348296
