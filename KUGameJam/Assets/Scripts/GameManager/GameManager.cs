@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private Transform _deathTrans;
     private GameObject _deathPanelGO;
     private GameObject _pausePanelGO;
+    private GameObject _winPanelGO;
     private GameObject[] _notes;
     private Transform _playerTrans;
     private Transform _originalTrans;
@@ -38,8 +39,10 @@ public class GameManager : MonoBehaviour
     {
         _deathPanelGO = GameObject.Find("DeathPanel");
         _pausePanelGO = GameObject.Find("PausePanel");
+        _winPanelGO = GameObject.Find("WinPanel");
         _deathPanelGO.SetActive(false);
         _pausePanelGO.SetActive(false);
+        _winPanelGO.SetActive(false);
         _playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
         FirstPersonController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
         _originalTrans = _playerTrans;
@@ -48,7 +51,7 @@ public class GameManager : MonoBehaviour
         _notes = GameObject.FindGameObjectsWithTag("Note");
         _numNotesCollected = 0;
         _isGamePaused = false;
-        HasWon = false;
+        HasWon = true;
         // Disable all door pieces
         foreach (GameObject doorPiece in _doorPieces)
         {
@@ -95,8 +98,14 @@ public class GameManager : MonoBehaviour
         // Interact with door
         if (HasWon)
         {
-            // Load the mall scene
-            SceneManager.LoadScene(2);
+
+            // Set mouse look sens to 0
+            FirstPersonController.m_MouseLook.XSensitivity = 0f;
+            FirstPersonController.m_MouseLook.YSensitivity = 0f;
+            // Show win panel
+            _winPanelGO.SetActive(true);
+            // Pause game
+            PauseGame();
         }
     }
 
