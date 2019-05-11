@@ -259,7 +259,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void StaminaDepletion()
         {
-            Debug.Log("Depleting stamina");
             if (m_StaminaTime <= Time.time && !m_IsWalking)
             {
                 // Deplete light meter every second

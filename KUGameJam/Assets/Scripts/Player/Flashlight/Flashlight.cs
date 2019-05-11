@@ -22,7 +22,7 @@ public class Flashlight : MonoBehaviour
     public int CurrentFlashlightMeter { get { return _currentFlashlightMeter; } set { _currentFlashlightMeter = value; } } 
  
 
-    private bool _isLightOn;                                                            // Boolean used for checking if the light is turned on
+    public bool IsLightOn;                                                            // Boolean used for checking if the light is turned on
     private float _lightTime;
     private bool _canFlashlightTurnOn;
 
@@ -33,7 +33,7 @@ public class Flashlight : MonoBehaviour
     {
         // Set the current flash light meter to the maximum at the beginning of the game
         _currentFlashlightMeter = _maxFlashlightMeter;
-        _isLightOn = false;
+        IsLightOn = false;
         _canFlashlightTurnOn = true;
         // Disable light and light collider
         _light.enabled = false;
@@ -43,19 +43,19 @@ public class Flashlight : MonoBehaviour
     private void Update()
     {
         // Check if mouse 1 pressed
-        if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && !_isLightOn)
+        if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && !IsLightOn)
         {
             // Turn on flashlight
             TurnOnFlashlight();
         }
-        else if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && _isLightOn)
+        else if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && IsLightOn)
         {
             // Turn off flashlight if interact button is pressed
             TurnOffFlashlight();
         }
 
         // Recharge meter if not at maximum
-        if (_currentFlashlightMeter < _maxFlashlightMeter && !_isLightOn)
+        if (_currentFlashlightMeter < _maxFlashlightMeter && !IsLightOn)
             LightMeterRecharge();
 
         if (_currentFlashlightMeter < 10 && _canFlashlightTurnOn)
@@ -67,7 +67,7 @@ public class Flashlight : MonoBehaviour
         }
 
         // Deplete light meter if flashlight is turned on
-        if (_isLightOn)
+        if (IsLightOn)
         {
             LightMeterDepletion();
         }
@@ -79,33 +79,11 @@ public class Flashlight : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
-        // If enemy enters collider, stop the enemy
-        if (col.CompareTag("Enemy"))
-        {
-            // Stop enemy's movement
-            EnemyAI enemyAI = col.GetComponent<EnemyAI>();
-            enemyAI.StopMovement();
-        }
-    }
-
-    private void OnTriggerExit(Collider col)
-    {
-        // If enemy leaves collider, resume enemy movement
-        if (col.CompareTag("Enemy"))
-        {
-            // Stop enemy's movement
-            EnemyAI enemyAI = col.GetComponent<EnemyAI>();
-            enemyAI.ResumeMovement();
-        }
-    }
-
     // Function for shining flashlight
     private void TurnOnFlashlight()
     {
         // Enable collider when shining
-        _isLightOn = true;
+        IsLightOn = true;
         _lightCol.enabled = true;
         // Enable light
         _light.enabled = true;
@@ -114,7 +92,7 @@ public class Flashlight : MonoBehaviour
     private void TurnOffFlashlight()
     {
         // Disable collider
-        _isLightOn = false;
+        IsLightOn = false;
         _lightCol.enabled = false;
         // Disable light
         _light.enabled = false;
