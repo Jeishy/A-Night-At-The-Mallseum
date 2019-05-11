@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] [Tooltip("The initial movement speed of the enemy")] private int _initMoveSpeed;
     [SerializeField] [Tooltip("The max time that the enemy will follow the player after player leaves line of sight")] private float _maxFollowTime;
     [SerializeField] private float _maxPursueDistance;
-    [SerializeField] [Tooltip("List of all waypoints for the enemy")] private List<GameObject> _waypoints = new List<GameObject>();
+    [SerializeField] [Tooltip("List of all waypoint's transforms for the enemy")] private List<Transform> _waypoints = new List<Transform>();
 
     private NavMeshAgent _agent;
     public EnemyStates _currentState;
@@ -24,6 +24,7 @@ public class EnemyAI : MonoBehaviour
     private bool _isNewStateSet;
     private Flashlight _flashlight;
     private bool _isMovementStopped;
+    private int destPoint = 0;
 
     private void Start()
     {
@@ -32,6 +33,8 @@ public class EnemyAI : MonoBehaviour
         _currentState = EnemyStates.Patrol;
         _flashlight = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         _isMovementStopped = false;
+
+        GotoNextPoint();
     }
 
     private void FixedUpdate()
@@ -87,15 +90,16 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private float GetDistanceToPlayer()
-    {
-        float distance;
-        distance = Mathf.Abs(Vector3.Distance(transform.position, _playerTrans.position));
-        return distance;
-    }
-
     private void Patrol()
     {
+        if (_lastState == EnemyStates.Alerted)
+        {
+            _agent.ResetPath();
+            _lastState = _currentState;
+        }
+
+        if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
+            GotoNextPoint();
     }
 
     // Function for pursuing the player once in line of sight
@@ -120,6 +124,44 @@ public class EnemyAI : MonoBehaviour
         }
         // Go back to patrolling after being alerted 
         SetNewState(EnemyStates.Patrol);
+    }
+
+    /*private Transform FindNearestWaypoint()
+    {
+        float distanceToNearestWaypoint = 1000000f;
+        Transform nearestWaypoint = null;
+        foreach (Transform waypoint in _waypoints)
+        {
+            float distance = Vector3.Distance(waypoint.position, transform.position);
+            if (distance < distanceToNearestWaypoint)
+            {
+                distanceToNearestWaypoint = distance;
+                nearestWaypoint = waypoint;
+            }
+        }
+
+        return nearestWaypoint;
+    }*/
+
+    private float GetDistanceToPlayer()
+    {
+        float distance;
+        distance = Mathf.Abs(Vector3.Distance(transform.position, _playerTrans.position));
+        return distance;
+    }
+
+    private void GotoNextPoint()
+    {
+        // Returns if no points have been set up
+        if (_waypoints.Count == 0)
+            return;
+
+        // Set the agent to go to the currently selected destination.
+        _agent.destination = _waypoints[destPoint].position;
+
+        // Choose the next point in the array as the destination,
+        // cycling to the start if necessary.
+        destPoint = (destPoint + 1) % _waypoints.Count;
     }
 
     public void SetNewState(EnemyStates newState)
