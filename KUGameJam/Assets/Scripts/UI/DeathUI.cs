@@ -7,6 +7,7 @@ public class DeathUI : MonoBehaviour
 {
     public void RestartGame()
     {
+        Debug.Log("Restart game");
         Time.timeScale = 1;
         // Reload the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

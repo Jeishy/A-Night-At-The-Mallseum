@@ -6,7 +6,6 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class GameManager : MonoBehaviour
 {
     [HideInInspector] public static GameManager Instance = null;
-    [HideInInspector] public bool IsPlayerDead;
     [HideInInspector] public FirstPersonController FirstPersonController;
 
     private Transform _deathTrans;
@@ -33,7 +32,6 @@ public class GameManager : MonoBehaviour
         _deathPanelGO.SetActive(false);
         _playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
         FirstPersonController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
-        IsPlayerDead = false;
         _originalTrans = _playerTrans;
         _deathTrans = GameObject.Find("DeathTransform").transform;
     }
@@ -43,13 +41,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("Die");
             Die();
-        }
-
-        if (IsPlayerDead)
-        {
-            _playerTrans.rotation = Quaternion.Lerp(_originalTrans.rotation, _deathTrans.rotation, Time.time * 0.4f);
         }
     }
 
@@ -59,10 +51,8 @@ public class GameManager : MonoBehaviour
         // Set mouse look sens to 0
         FirstPersonController.m_MouseLook.XSensitivity = 0f;
         FirstPersonController.m_MouseLook.YSensitivity = 0f;
-
-        IsPlayerDead = true;
         // Pause game
-        StartCoroutine(PauseGame());
+        PauseGame();
         // Show death canvas
         _deathPanelGO.SetActive(true);
     }
@@ -76,9 +66,13 @@ public class GameManager : MonoBehaviour
         // Load notes to text box
     }
 
-    private IEnumerator PauseGame()
+    private void PauseGame()
     {
-        yield return new WaitForSeconds(2f);
+        // Disable fps controller
+        FirstPersonController.enabled = false;
+        // Lock and show cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         // Pause the game
         Time.timeScale = 0;
     }
