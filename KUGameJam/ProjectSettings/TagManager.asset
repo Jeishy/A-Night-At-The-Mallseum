@@ -9,6 +9,8 @@ TagManager:
   - Dialogue
   - LightCone
   - Battery
+  - Enemy
+  - DoorPiece
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public enum EnemyStates
 {
-    Patrol, Pursue, Alerted
+    Patrol, Pursue, Alerted, Caught
 }
 
 public class EnemyAI : MonoBehaviour
@@ -58,6 +58,11 @@ public class EnemyAI : MonoBehaviour
             ResumeMovement();
         }
 
+        if (GetDistanceToPlayer() <= 1.5f)
+        {
+            SetNewState(EnemyStates.Caught);
+        }
+
         switch (_currentState)
         {
             case EnemyStates.Patrol:
@@ -68,6 +73,9 @@ public class EnemyAI : MonoBehaviour
                 break;
             case EnemyStates.Alerted:
                 StartCoroutine(Alerted());
+                break;
+            case EnemyStates.Caught:
+                Caught();
                 break;
             default:
                 Debug.LogError("Enemy state is null.");
@@ -124,6 +132,12 @@ public class EnemyAI : MonoBehaviour
         }
         // Go back to patrolling after being alerted 
         SetNewState(EnemyStates.Patrol);
+    }
+
+    private void Caught()
+    {
+        // Kill the player if caught
+        GameManager.Instance.Die();
     }
 
     private float GetDistanceToPlayer()
