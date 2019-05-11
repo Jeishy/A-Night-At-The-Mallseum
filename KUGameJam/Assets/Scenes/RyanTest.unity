@@ -4446,6 +4446,11 @@ PrefabInstance:
       propertyPath: _movementSound
       value: 
       objectReference: {fileID: 8300000, guid: 639e5ac4321a0c840ae5e8d50f6746e4, type: 3}
+    - target: {fileID: 6498784110183923904, guid: 041b3aac6821e5a4aa3beebb365edef2,
+        type: 3}
+      propertyPath: _moveSpeedIncrease
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 041b3aac6821e5a4aa3beebb365edef2, type: 3}
 --- !u!1 &898407909

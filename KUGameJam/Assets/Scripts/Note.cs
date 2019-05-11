@@ -13,18 +13,18 @@ public class Note : MonoBehaviour
     public AudioClip pickupSound;
 
     public GameObject playerobject;
+    [HideInInspector] public bool IsNoteCollected;
 
     // Start is called before the first frame update
     void Start()
     {
         Noteimage.enabled = false;
         NoteSentencesText.SetActive(false);
+        IsNoteCollected = false;
     }
 
     public void ShowNoteImage()
     {
-        Debug.Log("LOL");
-
         Noteimage.enabled = true;
         NoteSentencesText.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(pickupSound);

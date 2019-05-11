@@ -55,9 +55,14 @@ public class Interactable : MonoBehaviour
                     if(hit.collider.CompareTag("Note"))
                     {
                         GameObject noteGo = hit.collider.gameObject;
-                        GameManager.Instance.NoteCollect(noteGo);
-
                         Note note = hit.collider.GetComponent<Note>();
+
+                        if (!note.IsNoteCollected)
+                        {
+                            note.IsNoteCollected = true;
+                            GameManager.Instance.NoteCollect(noteGo);
+                        }
+
                         DialogueTrigger dialogueTrigger = hit.collider.GetComponent<DialogueTrigger>();
 
                         note.ShowNoteImage();

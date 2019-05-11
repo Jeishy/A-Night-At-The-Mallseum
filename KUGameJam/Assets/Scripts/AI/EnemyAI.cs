@@ -152,7 +152,7 @@ public class EnemyAI : MonoBehaviour
     private void PlayMovementSound()
     {
         if (!_agent.isStopped)
-            AudioSource.PlayClipAtPoint(_movementSound, transform.position, 2f);
+            AudioSource.PlayClipAtPoint(_movementSound, transform.position, 2.4f);
     }
 
     private float GetDistanceToPlayer()

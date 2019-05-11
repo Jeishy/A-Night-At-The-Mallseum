@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private GameObject[] _notes;
     private Transform _playerTrans;
     private Transform _originalTrans;
-    private int _numNotesCollected;
+    [HideInInspector] public int _numNotesCollected;
     private bool _isGamePaused;
 
     private void Awake()
