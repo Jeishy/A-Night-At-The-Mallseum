@@ -7,6 +7,8 @@ TagManager:
   - Fire
   - Note
   - Dialogue
+  - LightCone
+  - Battery
   layers:
   - Default
   - TransparentFX

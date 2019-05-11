@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
         _flashlight = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         _isMovementStopped = false;
 
-        GotoNextPoint();
+        GoToNextPoint();
     }
 
     private void FixedUpdate()
@@ -99,7 +99,7 @@ public class EnemyAI : MonoBehaviour
         }
 
         if (!_agent.pathPending && _agent.remainingDistance < 0.5f)
-            GotoNextPoint();
+            GoToNextPoint();
     }
 
     // Function for pursuing the player once in line of sight
@@ -126,23 +126,6 @@ public class EnemyAI : MonoBehaviour
         SetNewState(EnemyStates.Patrol);
     }
 
-    /*private Transform FindNearestWaypoint()
-    {
-        float distanceToNearestWaypoint = 1000000f;
-        Transform nearestWaypoint = null;
-        foreach (Transform waypoint in _waypoints)
-        {
-            float distance = Vector3.Distance(waypoint.position, transform.position);
-            if (distance < distanceToNearestWaypoint)
-            {
-                distanceToNearestWaypoint = distance;
-                nearestWaypoint = waypoint;
-            }
-        }
-
-        return nearestWaypoint;
-    }*/
-
     private float GetDistanceToPlayer()
     {
         float distance;
@@ -150,7 +133,7 @@ public class EnemyAI : MonoBehaviour
         return distance;
     }
 
-    private void GotoNextPoint()
+    private void GoToNextPoint()
     {
         // Returns if no points have been set up
         if (_waypoints.Count == 0)
