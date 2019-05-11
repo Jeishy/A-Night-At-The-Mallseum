@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         FirstPersonController.enabled = true;
+        Time.timeScale = 1;
     }
 
     private void OpenPauseMenu()

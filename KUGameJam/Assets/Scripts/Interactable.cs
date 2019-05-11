@@ -38,11 +38,11 @@ public class Interactable : MonoBehaviour
             Debug.DrawRay(transform.position, Vector3.Normalize(hit.point - transform.position)* 100f, Color.green);
             if (isInteracting == false)
             {
-                /*interactIcon.enabled = false;
+                interactIcon.enabled = false;
                 if (interactIcon != null)
                 {
-                    interactIcon.enabled = true;
-                }*/
+                    
+                }
                 
 
 
@@ -61,9 +61,10 @@ public class Interactable : MonoBehaviour
                         DialogueTrigger dialogueTrigger = hit.collider.GetComponent<DialogueTrigger>();
 
                         note.ShowNoteImage();
+                        
                         TriggerDialogue(dialogueTrigger.dialogue);
                     }
-                    else if (hit.collider.CompareTag("Battery"))
+                    if (hit.collider.CompareTag("Battery"))
                     {
                         Battery battery = hit.collider.gameObject.GetComponent<Battery>();
                         battery.BatteryCollect();
