@@ -39,11 +39,11 @@ public class Interactable : MonoBehaviour
             Debug.DrawRay(transform.position, Vector3.Normalize(hit.point - transform.position)* 100f, Color.green);
             if (isInteracting == false)
             {
-                interactIcon.enabled = false;
+                /*interactIcon.enabled = false;
                 if (interactIcon != null)
                 {
                     interactIcon.enabled = true;
-                }
+                }*/
                 
 
 

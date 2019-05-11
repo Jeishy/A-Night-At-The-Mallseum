@@ -10,9 +10,6 @@ public class Flashlight : MonoBehaviour
     [Tooltip("The rate at wich the flashlight meter decreases")]
     [SerializeField] private int _lightMeterDepletionRate;                               // The depletion rate of the flashlight
 
-    [Tooltip("The rate at wich the flashlight meter increases")]
-    [SerializeField] private int _lightMeterRechargeRate;                               // The recharge rate of the flashlight
-
     [Tooltip("The collider for the light from the flashlight")]
     [SerializeField] private Collider _lightCol;                                        // The light's collider (The light coming from the flashlight)
 
@@ -42,7 +39,6 @@ public class Flashlight : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_currentFlashlightMeter);
         // Check if mouse 1 pressed
         if (Input.GetButtonDown("Interact") && _canFlashlightTurnOn && !IsLightOn)
         {
@@ -54,10 +50,6 @@ public class Flashlight : MonoBehaviour
             // Turn off flashlight if interact button is pressed
             TurnOffFlashlight();
         }
-
-        // Recharge meter if not at maximum
-        if (_currentFlashlightMeter < _maxFlashlightMeter && !IsLightOn)
-            LightMeterRecharge();
 
         if (_currentFlashlightMeter < 10 && _canFlashlightTurnOn)
         {
@@ -109,19 +101,19 @@ public class Flashlight : MonoBehaviour
         }
     }
 
-    private void LightMeterRecharge()
-    {
-        if (_lightTime <= Time.time)
-        {
-            // Recharge light meter every second
-            _lightTime = Time.time + 1f;
-            _currentFlashlightMeter += _lightMeterRechargeRate;
-        }
-    }
-
     public void IncreaseFlashlightMeter(float rechargeAmount)
     {
         int recharge = Mathf.RoundToInt(rechargeAmount);
         _currentFlashlightMeter += recharge;
+    }
+
+    public int GetCurrentFlashlightMeter()
+    {
+        return _currentFlashlightMeter;
+    }
+
+    public void SetCurrentFlashLightMeter(int value)
+    {
+        _currentFlashlightMeter = value;
     }
 }

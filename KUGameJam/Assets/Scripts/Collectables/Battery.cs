@@ -19,7 +19,12 @@ public class Battery : MonoBehaviour
 
     public void BatteryCollect()
     {
-        _flashlight.IncreaseFlashlightMeter(_rechargeAmount);
-        Destroy(gameObject);
+        if (_flashlight.GetCurrentFlashlightMeter() < _flashlight._maxFlashlightMeter)
+        {
+            _flashlight.IncreaseFlashlightMeter(_rechargeAmount);
+            if (_flashlight.GetCurrentFlashlightMeter() > _flashlight._maxFlashlightMeter)
+                _flashlight.SetCurrentFlashLightMeter(50);
+            Destroy(gameObject);
+        }
     }
 }
