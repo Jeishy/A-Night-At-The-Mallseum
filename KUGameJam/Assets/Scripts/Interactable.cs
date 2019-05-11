@@ -35,7 +35,6 @@ public class Interactable : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, interactDistance, interactlayer))
         {
-            Debug.Log("Interacting");
             Debug.DrawRay(transform.position, Vector3.Normalize(hit.point - transform.position)* 100f, Color.green);
             if (isInteracting == false)
             {
