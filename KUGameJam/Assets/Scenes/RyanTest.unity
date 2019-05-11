@@ -3353,6 +3353,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 2186430941476567602, guid: 25c89ceb8381a8e4c885882a03b22806, type: 3}
+--- !u!114 &1383587809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1498940191716123579, guid: c67bf75731fda024da5eb1e45dfa1373,
+    type: 3}
+  m_PrefabInstance: {fileID: 1058774863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2a8339913fa29479156a5ef77fecfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1409056589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3475,6 +3487,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2277119067600962380, guid: 2664990909f289c42866cf9af988d7fe,
+        type: 3}
+      propertyPath: _fpsController
+      value: 
+      objectReference: {fileID: 1956274495}
+    - target: {fileID: 265242343875741667, guid: 2664990909f289c42866cf9af988d7fe,
+        type: 3}
+      propertyPath: _flashlight
+      value: 
+      objectReference: {fileID: 1383587809}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2664990909f289c42866cf9af988d7fe, type: 3}
 --- !u!4 &1417691194 stripped
@@ -4487,6 +4509,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1058774863}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1956274495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7944799943371448511, guid: c67bf75731fda024da5eb1e45dfa1373,
+    type: 3}
+  m_PrefabInstance: {fileID: 1058774863}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956274490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1956274497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7944799943378143615, guid: c67bf75731fda024da5eb1e45dfa1373,
