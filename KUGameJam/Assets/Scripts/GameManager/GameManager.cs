@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         _notes = GameObject.FindGameObjectsWithTag("Note");
         _numNotesCollected = 0;
         _isGamePaused = false;
-        HasWon = true;
+        HasWon = false;
         // Disable all door pieces
         foreach (GameObject doorPiece in _doorPieces)
         {
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         PauseGame();
     }
 
-    public void CompleteLevel()
+    public void CheckIfCompleteLevel()
     {
         // Interact with door
         if (HasWon)

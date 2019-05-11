@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float _maxPursueDistance;
     [SerializeField] [Tooltip("List of all waypoint's transforms for the enemy")] private List<Transform> _waypoints = new List<Transform>();
 
+    [SerializeField] private AudioClip _movementSound;
+
     private NavMeshAgent _agent;
     public EnemyStates _currentState;
     private EnemyStates _lastState;
@@ -25,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     private Flashlight _flashlight;
     private bool _isMovementStopped;
     private int destPoint = 0;
+    private float _soundTime;
 
     private void Start()
     {
@@ -33,12 +36,18 @@ public class EnemyAI : MonoBehaviour
         _currentState = EnemyStates.Patrol;
         _flashlight = GameObject.Find("Flashlight").GetComponent<Flashlight>();
         _isMovementStopped = false;
-
+        _soundTime = 0f;
         GoToNextPoint();
     }
 
     private void FixedUpdate()
     {
+        if (_soundTime < Time.time)
+        {
+            _soundTime = Time.time + 1f;
+            PlayMovementSound();
+        }
+
         if (IsPlayerInLineOfSight())
         {
             // Play appear particle effect
@@ -138,6 +147,12 @@ public class EnemyAI : MonoBehaviour
     {
         // Kill the player if caught
         GameManager.Instance.Die();
+    }
+
+    private void PlayMovementSound()
+    {
+        if (!_agent.isStopped)
+            AudioSource.PlayClipAtPoint(_movementSound, transform.position, 1f);
     }
 
     private float GetDistanceToPlayer()
