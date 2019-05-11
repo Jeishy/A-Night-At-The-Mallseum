@@ -405,6 +405,7 @@ MonoBehaviour:
     m_Bits: 256
   interactIcon: {fileID: 0}
   isInteracting: 0
+  dialogueManager: {fileID: 0}
 --- !u!1001 &7111959366757920204
 PrefabInstance:
   m_ObjectHideFlags: 0

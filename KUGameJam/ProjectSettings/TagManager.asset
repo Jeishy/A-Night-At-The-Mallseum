@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - Note
+  - Dialogue
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class Note : MonoBehaviour
 {
 
     public Image Noteimage;
+    public GameObject NoteSentencesText;
 
     public AudioClip pickupSound;
     public AudioClip putawaySound;
@@ -18,6 +19,7 @@ public class Note : MonoBehaviour
     void Start()
     {
         Noteimage.enabled = false;
+        NoteSentencesText.SetActive(false);
     }
 
     public void ShowNoteImage()
@@ -25,6 +27,7 @@ public class Note : MonoBehaviour
         Debug.Log("LOL");
 
         Noteimage.enabled = true;
+        NoteSentencesText.SetActive(true);
         GetComponent<AudioSource>().PlayOneShot(pickupSound);
         playerobject.GetComponent<FirstPersonController>().enabled = false;
 
@@ -35,6 +38,7 @@ public class Note : MonoBehaviour
     public void HideNoteImage()
     {
         Noteimage.enabled = false;
+        NoteSentencesText.SetActive(false);
         GetComponent<AudioSource>().PlayOneShot(putawaySound);
 
         Cursor.lockState = CursorLockMode.Locked;

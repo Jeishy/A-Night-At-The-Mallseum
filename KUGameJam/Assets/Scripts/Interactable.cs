@@ -15,6 +15,7 @@ public class Interactable : MonoBehaviour
 
     public bool isInteracting;
 
+    public DialogueManager dialogueManager;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,7 @@ public class Interactable : MonoBehaviour
         if (interactIcon != null)
         {
             interactIcon.enabled = false;
-
+            
         }
     }
 
@@ -53,8 +54,11 @@ public class Interactable : MonoBehaviour
                     }*/
                     if(hit.collider.CompareTag("Note"))
                     {
-                        
-                        hit.collider.GetComponent<Note>().ShowNoteImage();
+                        Note note = hit.collider.GetComponent<Note>();
+                        DialogueTrigger dialogueTrigger = hit.collider.GetComponent<DialogueTrigger>();
+
+                        note.ShowNoteImage();
+                        TriggerDialogue(dialogueTrigger.dialogue);
                     }
 
 
@@ -63,4 +67,9 @@ public class Interactable : MonoBehaviour
             }
         }
     }
+    public void TriggerDialogue(Dialogue dialogue)
+    {
+        dialogueManager.StartDialogue(dialogue);
+    }
+
 }

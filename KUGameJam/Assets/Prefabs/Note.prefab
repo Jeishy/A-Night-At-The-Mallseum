@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7520941995871331599}
   - component: {fileID: 7520941995871331596}
   - component: {fileID: 7520941995871331598}
+  - component: {fileID: 8625724040715164456}
   m_Layer: 8
   m_Name: Note
   m_TagString: Note
@@ -91,8 +92,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2.2204463e-16, z: 10.000001}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 11.700011, y: 2.5979244e-16, z: 11.700011}
+  m_Center: {x: -0.001240761, y: -0.0000000036606704, z: 1.8104129e-12}
 --- !u!114 &7520941995871331596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Noteimage: {fileID: 0}
+  NoteSentencesText: {fileID: 0}
   pickupSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   putawaySound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   playerobject: {fileID: 0}
@@ -205,3 +207,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8625724040715164456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7520941995871331593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7a6ffdfb318104e9b75adc2a2168b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences: hEy  iTS pEWDS lULL
