@@ -30,4 +30,4 @@ Material:
     m_Floats:
     - _BumpAmt: 128
     m_Colors:
-    - _Color: {r: 1, g: 0.2028302, b: 0.2028302, a: 1}
+    - _Color: {r: 0.756942, g: 0.82517505, b: 0.8490566, a: 1}

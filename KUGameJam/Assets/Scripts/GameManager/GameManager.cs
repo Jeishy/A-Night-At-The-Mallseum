@@ -57,13 +57,18 @@ public class GameManager : MonoBehaviour
         _deathPanelGO.SetActive(true);
     }
 
+    public void Win()
+    {
+        // Open the door
+    }
+
     // Function called when player collects a note
     public void NoteCollect(GameObject collectableGO)
     {
         // Add collectable to collected collectables list
-        CollectedCollectables.Add(collectableGO); 
-        // Show note canvas
-        // Load notes to text box
+        CollectedCollectables.Add(collectableGO);
+        if (CollectedCollectables.Count == 9)
+            Win();
     }
 
     private void PauseGame()
