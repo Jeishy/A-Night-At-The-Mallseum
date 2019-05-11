@@ -1951,6 +1951,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2020,31 +2045,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.052500002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -4115,6 +4115,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4184,31 +4209,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.052500013
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -4449,7 +4449,7 @@ PrefabInstance:
     - target: {fileID: 6498784110183923904, guid: 041b3aac6821e5a4aa3beebb365edef2,
         type: 3}
       propertyPath: _moveSpeedIncrease
-      value: 0.4
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 041b3aac6821e5a4aa3beebb365edef2, type: 3}
@@ -5416,6 +5416,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5485,31 +5510,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.052500002
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -6199,6 +6199,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6268,31 +6293,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.052500047
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -6638,6 +6638,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6707,31 +6732,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0525
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -8944,16 +8944,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2277119067600962380, guid: 2664990909f289c42866cf9af988d7fe,
-        type: 3}
-      propertyPath: _fpsController
-      value: 
-      objectReference: {fileID: 1956274495}
-    - target: {fileID: 265242343875741667, guid: 2664990909f289c42866cf9af988d7fe,
-        type: 3}
-      propertyPath: _flashlight
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: a9dbbda471ce88c4fb94c0bb1c7cd9f0,
         type: 3}
       propertyPath: m_Name
@@ -9028,6 +9018,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 49.994484
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277119067600962380, guid: 2664990909f289c42866cf9af988d7fe,
+        type: 3}
+      propertyPath: _fpsController
+      value: 
+      objectReference: {fileID: 1956274495}
+    - target: {fileID: 265242343875741667, guid: 2664990909f289c42866cf9af988d7fe,
+        type: 3}
+      propertyPath: _flashlight
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9dbbda471ce88c4fb94c0bb1c7cd9f0, type: 3}
@@ -9141,6 +9141,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9210,31 +9235,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.052500013
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -9329,6 +9329,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9399,31 +9424,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.052500006
       objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
-      objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: dialogue.sentences
@@ -15251,6 +15251,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: putawaySound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15320,31 +15345,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0525
-      objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: pickupSound
-      value: 
-      objectReference: {fileID: 8300000, guid: fb08f03eadb29444bbf1470ee18ac6d4, type: 3}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: putawaySound
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
@@ -17270,6 +17270,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Note
       objectReference: {fileID: 0}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: Noteimage
+      value: 
+      objectReference: {fileID: 493399268}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: NoteSentencesText
+      value: 
+      objectReference: {fileID: 1553757098}
+    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
+        type: 3}
+      propertyPath: playerobject
+      value: 
+      objectReference: {fileID: 1956274490}
     - target: {fileID: 7520941995871331597, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17340,21 +17355,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.05249817
       objectReference: {fileID: 0}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: Noteimage
-      value: 
-      objectReference: {fileID: 493399268}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: NoteSentencesText
-      value: 
-      objectReference: {fileID: 1553757098}
-    - target: {fileID: 7520941995871331596, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
-        type: 3}
-      propertyPath: playerobject
-      value: 
-      objectReference: {fileID: 1956274490}
     - target: {fileID: 8625724040715164456, guid: 53a8b001c59e63e40a725fbfe6a4eb5c,
         type: 3}
       propertyPath: dialogue.sentences
